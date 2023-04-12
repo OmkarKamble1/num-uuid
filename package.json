@@ -16,12 +16,13 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/OmkarKamble1/nuuid.git"
+		"url": "git+https://github.com/OmkarKamble1/num-uuid.git"
 	},
 	"bugs": {
 		"type": "git",
-		"url": "https://github.com/OmkarKamble1/nuuid/issues"
+		"url": "https://github.com/OmkarKamble1/num-uuid.git/issues"
 	},
+	"homepage": "https://github.com/OmkarKamble1/num-uuid.git#readme",
 	"author": "Omkar Kamble",
 	"license": "MIT"
 }
