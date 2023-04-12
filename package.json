@@ -1,0 +1,26 @@
+{
+	"name": "nuuid",
+	"version": "1.0.0",
+	"description": "Generates a unique numeric id",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node src/index.js"
+	},
+	"keywords": [
+		"unique",
+		"nuuid",
+		"numeric",
+		"id"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/OmkarKamble1/nuuid.git"
+	},
+	"bugs": {
+		"type": "git",
+		"url": "https://github.com/OmkarKamble1/nuuid/issues"
+	},
+	"author": "Omkar Kamble",
+	"license": "MIT"
+}
