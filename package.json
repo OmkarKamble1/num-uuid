@@ -1,15 +1,16 @@
 {
-	"name": "nuuid",
-	"version": "1.0.0",
-	"description": "Generates a unique numeric id",
+	"name": "num-uuid",
+	"version": "1.2.0",
+	"description": "Generates a unique numeric uuid",
 	"main": "src/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node src/index.js"
 	},
 	"keywords": [
+		"num-uuid",
 		"unique",
-		"nuuid",
+		"uuid",
 		"numeric",
 		"id"
 	],

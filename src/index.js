@@ -1,4 +1,4 @@
-export const nuuid = () => {
+function num_uuid() {
 	const id = [];
 	for (let i = 0; i <= 5; i++) {
 		let id_field;
@@ -26,4 +26,7 @@ export const nuuid = () => {
 	const generated_id = id.join('-');
 
 	return generated_id;
-};
+}
+
+module.exports = { num_uuid };
+module.exports = num_uuid;
