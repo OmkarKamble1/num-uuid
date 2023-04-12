@@ -1,6 +1,6 @@
 {
 	"name": "num-uuid",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"description": "Generates a unique numeric uuid",
 	"main": "src/index.js",
 	"scripts": {
