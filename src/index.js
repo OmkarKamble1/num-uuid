@@ -5,7 +5,7 @@
  example => 92987584-1777-3154-0865-0082-50182599
 */
 function num_uuid() {
-	if (arguments) {
+	if (arguments.length > 0) {
 		throw new Error('This function does not accept arguments.');
 	}
 	const id = [];
@@ -36,7 +36,7 @@ function num_uuid() {
 
 	return generated_id;
 }
-module.exports.num_uuid = num_uuid;
+module.exports = num_uuid;
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -1,9 +1,8 @@
 {
 	"name": "num-uuid",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "Generates a unique numeric uuid",
 	"main": "src/index.js",
-	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node src/index.js"
