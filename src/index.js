@@ -64,12 +64,7 @@ function num_uuidV2(partitions, digits) {
 				.substring(2, digits - id_field.length + 2);
 			id_field = id_field.concat(temp);
 		}
-		// if (id_field.length < digits) {
-		// 	const temp = Math.random()
-		// 		.toString()
-		// 		.substring(2, digits - id_field.length + 2);
-		// 	id_field.concat(temp);
-		// }
+
 		id.push(id_field);
 	}
 
