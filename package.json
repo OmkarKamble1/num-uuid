@@ -1,11 +1,12 @@
 {
 	"name": "num-uuid",
-	"version": "1.7.1",
+	"version": "2.0.0",
 	"description": "Generates a unique numeric uuid",
-	"main": "src/index.js",
+	"main": "src/num_uuid.js",
+	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node src/index.js"
+		"start": "node src/num_uuid.js"
 	},
 	"keywords": [
 		"num-uuid",
@@ -24,5 +25,10 @@
 	},
 	"homepage": "https://github.com/OmkarKamble1/num-uuid.git#readme",
 	"author": "Omkar Kamble",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"eslint": "^8.38.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.27.5"
+	}
 }
