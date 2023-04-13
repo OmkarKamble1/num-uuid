@@ -37,24 +37,24 @@ function num_uuid() {
 
 // **num_uuid version 2**
 /* it accepts two arguments len and digits
- len => number of partitions in the uuid separated by "-"
+ count => number of partitions in the uuid separated by "-"
  digit => number of digits in one partition of the uuid
  example num_uuidV2(8,5) => 22038-03483-33887-62740-21159-87793-33838-30612
 */
-function num_uuidV2(partitions, digits) {
+function num_uuidV2(count, digits) {
 	if (arguments.length !== 2) {
 		throw new Error(
 			`Expected two arguments but found ${arguments.length}.`
 		);
 	}
-	if (typeof digits !== 'number' || typeof partitions !== 'number') {
+	if (typeof digits !== 'number' || typeof count !== 'number') {
 		throw new TypeError('Both arguments must be of type numbers.');
 	}
-	if (digits <= 0 || partitions <= 0) {
+	if (digits <= 0 || count <= 0) {
 		throw new RangeError('Arguments must be positive and greater than 0.');
 	}
 	const id = [];
-	for (let i = 0; i < partitions; i++) {
+	for (let i = 0; i < count; i++) {
 		let id_field = Math.random()
 			.toString()
 			.substring(2, digits + 2);

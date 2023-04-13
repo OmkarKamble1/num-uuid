@@ -36,6 +36,15 @@ import { num_uuid, num_uuidV2 } from 'num-uuid';
 const { num_uuid, num_uuidV2 } = require('num-uuid');
 ```
 
+<br/>
+
+# Methods
+
+-   num_uuid()
+-   num_uuidV2(count, digits)
+
+<br/>
+
 # Example
 
 ### Using import (ES6)
@@ -67,4 +76,4 @@ console.log(v2);
 
 ### Made with ❤️
 
-_feel free to report bugs at [github](https://github.com/OmkarKamble1/num-uuid/issues)_
+_feel free to report bugs at [github](https://github.com/OmkarKamble1/num-uuid/issues)_.
