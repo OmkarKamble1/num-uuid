@@ -1,6 +1,6 @@
 {
 	"name": "num-uuid",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"description": "Generates a unique numeric uuid",
 	"main": "src/index.js",
 	"scripts": {
@@ -20,7 +20,7 @@
 	},
 	"bugs": {
 		"type": "git",
-		"url": "https://github.com/OmkarKamble1/num-uuid.git/issues"
+		"url": "https://github.com/OmkarKamble1/num-uuid/issues"
 	},
 	"homepage": "https://github.com/OmkarKamble1/num-uuid.git#readme",
 	"author": "Omkar Kamble",

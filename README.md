@@ -1,7 +1,7 @@
 # A numeric uuid generator
 
-num-uuid is a simple and efficient package for generating unique numeric UUIDs.
-The probability of generating the same UUID twice is practically zero. Install num-uuid today and ensure that your unique IDs remain unique.
+num-uuid is a simple and efficient package for generating unique numeric UUIDs. The numeric UUID's are simple and easy to generate.
+The probability of generating the same UUID twice is practically zero. Let's break the barrier of length. Install num-uuid today and ensure that your unique IDs remain unique.
 
 <br/>
 
@@ -9,6 +9,8 @@ The probability of generating the same UUID twice is practically zero. Install n
 
 -   Generate a uuidv4() like numeric UUID.
 -   Generate a customized numeric UUID of desired length.
+-   num_uuidV2 works fine with big values.
+-   Simple, lightweight and FAST
 
 <br/>
 
@@ -31,12 +33,12 @@ import { num_uuid, num_uuidV2 } from 'num-uuid';
 ### Using require
 
 ```
-const num_uuid = require('num-uuid');
+const { num_uuid, num_uuidV2 } = require('num-uuid');
 ```
 
 # Example
 
-### Using import
+### Using import (ES6)
 
 ```
 import { num_uuid, num_uuidV2 } from 'num-uuid';
@@ -50,15 +52,19 @@ console.log(v2);
 
 ```
 
-### Using require
+### Using require (CommonJS)
 
 ```
-const num_uuid = require('num-uuid');
+const { num_uuid, num_uuidV2 } = require('num-uuid');
 const v1 = num_uuid();
-const v2 = num_uuid.num_uuidV2(4,6);
+const v2 = num_uuidV2(3,8);
 console.log(v1);
 console.log(v2);
 
 // output v1 -> 63637675-7210-3448-7701-3985-56892695
-// output v2 -> 943914-687536-294528-530130
+// output v2 -> 75452281-66088079-04628138
 ```
+
+### Made with ❤️
+
+_feel free to report bugs at [github](https://github.com/OmkarKamble1/num-uuid/issues)_

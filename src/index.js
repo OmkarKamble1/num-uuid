@@ -36,9 +36,6 @@ function num_uuid() {
 
 	return generated_id;
 }
-module.exports = num_uuid;
-
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 // **num_uuid version 2**
 /* it accepts two arguments len and digits
@@ -47,6 +44,11 @@ module.exports = num_uuid;
  example num_uuidV2(8,5) => 22038-03483-33887-62740-21159-87793-33838-30612
 */
 function num_uuidV2(len, digits) {
+	if (arguments.length !== 2) {
+		throw new Error(
+			`Expected two arguments but found ${arguments.length}.`
+		);
+	}
 	if (typeof digits !== 'number' || typeof len !== 'number') {
 		throw new TypeError('Both arguments must be of type numbers.');
 	}
@@ -55,15 +57,21 @@ function num_uuidV2(len, digits) {
 	}
 	const id = [];
 	for (let i = 0; i < len; i++) {
-		const id_field = Math.random()
+		let id_field = Math.random()
 			.toString()
 			.substring(2, digits + 2);
-		if (id_field.length < digits) {
+		while (id_field.length < digits) {
 			const temp = Math.random()
 				.toString()
 				.substring(2, digits - id_field.length + 2);
-			id_field.concat(temp);
+			id_field = id_field.concat(temp);
 		}
+		// if (id_field.length < digits) {
+		// 	const temp = Math.random()
+		// 		.toString()
+		// 		.substring(2, digits - id_field.length + 2);
+		// 	id_field.concat(temp);
+		// }
 		id.push(id_field);
 	}
 
@@ -71,8 +79,5 @@ function num_uuidV2(len, digits) {
 
 	return generated_id;
 }
-module.exports.num_uuidV2 = num_uuidV2;
 
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-module.exports = num_uuid;
+module.exports = { num_uuid, num_uuidV2 };
