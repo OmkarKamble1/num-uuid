@@ -2,11 +2,17 @@
 /* it does not accept any argument
  example => 92987584-1777-3154-0865-0082-50182599
 */
-function num_uuid() {
-	if (arguments.length > 0) {
-		throw new Error('This function does not accept arguments.');
+function num_uuid(options = { prefix: '', suffix: '' }) {
+	if (arguments.length > 1) {
+		throw new Error(
+			`Expected one optional argument but found ${arguments.length}.`
+		);
 	}
+	const { prefix, suffix } = options;
 	const id = [];
+	if (prefix) {
+		id.push(prefix);
+	}
 	for (let i = 0; i <= 5; i++) {
 		let id_field;
 		if (i === 0 || i === 5) {
@@ -29,7 +35,9 @@ function num_uuid() {
 			id.push(id_field);
 		}
 	}
-
+	if (suffix) {
+		id.push(suffix);
+	}
 	const generated_id = id.join('-');
 
 	return generated_id;
@@ -41,8 +49,12 @@ function num_uuid() {
  digit => number of digits in one partition of the uuid
  example num_uuidV2(8,5) => 22038-03483-33887-62740-21159-87793-33838-30612
 */
-function num_uuidV2(count, digits) {
-	if (arguments.length !== 2) {
+function num_uuidV2(
+	count = 4,
+	digits = 6,
+	options = { prefix: '', suffix: '' }
+) {
+	if (arguments.length < 2 || arguments.length > 3) {
 		throw new Error(
 			`Expected two arguments but found ${arguments.length}.`
 		);
@@ -53,7 +65,11 @@ function num_uuidV2(count, digits) {
 	if (digits <= 0 || count <= 0) {
 		throw new RangeError('Arguments must be positive and greater than 0.');
 	}
+	const { prefix, suffix } = options;
 	const id = [];
+	if (prefix) {
+		id.push(prefix);
+	}
 	for (let i = 0; i < count; i++) {
 		let id_field = Math.random()
 			.toString()
@@ -67,7 +83,9 @@ function num_uuidV2(count, digits) {
 
 		id.push(id_field);
 	}
-
+	if (suffix) {
+		id.push(suffix);
+	}
 	const generated_id = id.join('-');
 
 	return generated_id;

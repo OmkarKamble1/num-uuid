@@ -9,8 +9,9 @@ The probability of generating the same UUID twice is practically zero. Let's bre
 
 -   Generate a uuidv4() like numeric UUID.
 -   Generate a customized numeric UUID of desired length.
+-   Add prefix and suffix to UUID (optional).
 -   num_uuidV2 works fine with big values.
--   Simple, lightweight and FAST
+-   Simple, lightweight and FAST.
 
 <br/>
 
@@ -40,8 +41,8 @@ const { num_uuid, num_uuidV2 } = require('num-uuid');
 
 # Methods
 
--   num_uuid()
--   num_uuidV2(count, digits)
+-   num_uuid({prefix: string, suffix: string})
+-   num_uuidV2(count, digits, {prefix: string, suffix: string})
 
 <br/>
 
@@ -51,27 +52,36 @@ const { num_uuid, num_uuidV2 } = require('num-uuid');
 
 ```
 import { num_uuid, num_uuidV2 } from 'num-uuid';
-const v1 = num_uuid();
-const v2 = num_uuidV2(4,6);
-console.log(v1);
-console.log(v2);
 
-// output v1 -> 50706496-4722-8213-2305-5387-14053816
-// output v2 -> 336932-935804-052740-284780
+const a1 = num_uuid();
+// output a1 -> 50706496-4722-8213-2305-5387-14053816
 
+const a2 = num_uuid({prefix: 'ORDER', suffix: '2023'});
+// output a2 -> ORDER-50706496-4722-8213-2305-5387-14053816-2023
+
+const b1 = num_uuidV2(3, 6);
+// output b1 -> 336932-935804-052740
+
+const b2 = num_uuidV2(3, 6, {prefix: 'ORDER', suffix: '2023'});
+// output b2 -> ORDER-336932-935804-052740-2023
 ```
 
 ### Using require (CommonJS)
 
 ```
 const { num_uuid, num_uuidV2 } = require('num-uuid');
-const v1 = num_uuid();
-const v2 = num_uuidV2(3,8);
-console.log(v1);
-console.log(v2);
 
-// output v1 -> 63637675-7210-3448-7701-3985-56892695
-// output v2 -> 75452281-66088079-04628138
+const a1 = num_uuid();
+// output a1 -> 50706496-4722-8213-2305-5387-14053816
+
+const a2 = num_uuid({prefix: 'ORDER', suffix: '2023'});
+// output a2 -> ORDER-50706496-4722-8213-2305-5387-14053816-2023
+
+const b1 = num_uuidV2(3, 6);
+// output b1 -> 336932-935804-052740
+
+const b2 = num_uuidV2(3, 6, {prefix: 'ORDER', suffix: '2023'});
+// output b2 -> ORDER-336932-935804-052740-2023
 ```
 
 ### Made with ❤️
