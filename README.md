@@ -1,7 +1,7 @@
 # A numeric uuid generator
 
-num-uuid is a simple and efficient package for generating unique numeric UUIDs. The numeric UUID's are simple and easy to generate.
-The probability of generating the same UUID twice is practically zero. Let's break the barrier of length. Install num-uuid today and ensure that your unique IDs remain unique.
+num-uuid is a simple and efficient package for generating unique numeric UUIDs. The numeric UUID's are simple and easy to generate. Add a prefix or suffix of your choice to create a fully customized ID that fits your requirements. It's quick, easy, and flexible!
+The probability of generating the same UUID twice is practically zero. Let's break the barrier of UUID length. Install num-uuid today and ensure that your unique IDs remain unique.
 
 <br/>
 
