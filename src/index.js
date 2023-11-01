@@ -1,5 +1,5 @@
 // **num_uuid version 1**
-/* it does not accept any argument
+/* it does not accept any arguments
  example => 92987584-1777-3154-0865-0082-50182599
 */
 function num_uuid(options = { prefix: '', suffix: '' }) {
@@ -44,7 +44,7 @@ function num_uuid(options = { prefix: '', suffix: '' }) {
 }
 
 // **num_uuid version 2**
-/* it accepts two arguments len and digits
+/* it accepts two arguments count and digits
  count => number of partitions in the uuid separated by "-"
  digit => number of digits in one partition of the uuid
  example num_uuidV2(8,5) => 22038-03483-33887-62740-21159-87793-33838-30612
